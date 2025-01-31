@@ -1,5 +1,6 @@
 import {API_URL} from "../app/(home)/page";
 import movieInfoStyle from "../styles/movie-info.module.css"
+import Link from "next/link";
 
 export async function getMovie(id: string) {
     await new Promise(resolve => setTimeout(resolve, 2000));
@@ -9,12 +10,14 @@ export async function getMovie(id: string) {
 
 export default async function MovieInfo({id}: { id:string }) {
     const movie = await getMovie(id);
-    console.log(movie.production_companies);
     return <div className={movieInfoStyle.container}>
         <img className={movieInfoStyle.poster} src={movie.poster_path} alt={movie.title} />
         <div className={movieInfoStyle.info}>
             <h1 className={movieInfoStyle.title}>{movie.title}</h1>
-            <h3>⭐️ {movie.vote_average.toFixed(1)}</h3>
+            <div className={movieInfoStyle.moreBox}>
+                <h3>⭐️ {movie.vote_average.toFixed(1)}</h3>
+                <Link href={`/movies/${movie.id}/credits`} >Credits</Link>
+            </div>
             <p>{movie.overview}</p>
             <div>
                 <p>
@@ -48,7 +51,7 @@ export default async function MovieInfo({id}: { id:string }) {
                 })}
             </div>
             <div>
-                <a href={movie.homepage} target={"_blank"}>Homepage &rarr;</a>
+                <Link href={movie.homepage} target={"_blank"}>Homepage &rarr;</Link>
             </div>
         </div>
     </div>

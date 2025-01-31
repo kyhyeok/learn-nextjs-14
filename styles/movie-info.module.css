@@ -22,6 +22,11 @@
     gap: 20px;
 }
 
+.moreBox {
+    display: flex;
+    justify-content: space-between;
+}
+
 .productionCompanies {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
