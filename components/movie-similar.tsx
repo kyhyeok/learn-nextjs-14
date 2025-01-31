@@ -1,9 +1,8 @@
-import {API_URL} from "../app/(home)/page";
 import movieCreditsStyle from "../styles/movie-other-info.module.css"
 import Link from "next/link";
+import {API_URL} from "../app/movie-api";
 
 export async function getSimilar(id: string) {
-    await new Promise(resolve => setTimeout(resolve, 1000));
     const response = await fetch(`${API_URL}/${id}/similar`);
     return response.json();
 }

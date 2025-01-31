@@ -1,6 +1,6 @@
 import {getMovie} from "./movie-info";
 
-type IParams = Promise<{
+export type IParams = Promise<{
     id: string;
 }>;
 
