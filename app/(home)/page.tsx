@@ -1,4 +1,3 @@
-import Link from "next/link";
 import Movie from "../../components/movie";
 import homeStyles from "../../styles/home.module.css"
 

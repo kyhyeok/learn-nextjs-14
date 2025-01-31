@@ -13,7 +13,9 @@ export default async function MovieInfo({id}: { id:string }) {
     return <div className={movieInfoStyle.container}>
         <img className={movieInfoStyle.poster} src={movie.poster_path} alt={movie.title} />
         <div className={movieInfoStyle.info}>
-            <h1 className={movieInfoStyle.title}>{movie.title}</h1>
+            <Link href={`/movies/${movie.id}`} >
+                <h1 className={movieInfoStyle.title}>{movie.title}</h1>
+            </Link>
             <div className={movieInfoStyle.moreBox}>
                 <h3>⭐️ {movie.vote_average.toFixed(1)}</h3>
                 <Link href={`/movies/${movie.id}/credits`} >Credits</Link>
