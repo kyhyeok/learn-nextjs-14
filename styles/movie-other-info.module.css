@@ -10,8 +10,11 @@
 .container > div {
     display: flex;
     border-radius: 10px;
-    opacity: 0.9;
+    opacity: 0.8;
     transition: opacity 0.2s ease-in-out;
+}
+.container > div img {
+    width: 185px;
 }
 .container > div:hover {
     opacity: 1;

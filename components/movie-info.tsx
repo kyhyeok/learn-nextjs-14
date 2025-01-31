@@ -17,6 +17,7 @@ export default async function MovieInfo({id}: { id:string }) {
             <div className={movieInfoStyle.moreBox}>
                 <h3>⭐️ {movie.vote_average.toFixed(1)}</h3>
                 <Link href={`/movies/${movie.id}/credits`} >Credits</Link>
+                <Link href={`/movies/${movie.id}/similar`} >Similar</Link>
             </div>
             <p>{movie.overview}</p>
             <div>

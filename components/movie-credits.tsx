@@ -1,6 +1,5 @@
 import {API_URL} from "../app/(home)/page";
-import movieInfoStyle from "../styles/movie-info.module.css"
-import movieCreditsStyle from "../styles/movie-credits.module.css"
+import movieCreditsStyle from "../styles/movie-other-info.module.css"
 import {getMovie} from "./movie-info";
 
 export async function getCredits(id: string) {
@@ -11,24 +10,7 @@ export async function getCredits(id: string) {
 
 export default async function MovieCredits({id}: { id: string }) {
     const credits = await getCredits(id);
-    const movie = await getMovie(id);
-    return <div>
-        <div className={movieInfoStyle.container}>
-            <img className={movieInfoStyle.poster} src={movie.poster_path} alt={movie.title}/>
-            <div className={movieInfoStyle.info}>
-                <h1 className={movieInfoStyle.title}>{movie.title}</h1>
-                <h3>⭐️ {movie.vote_average.toFixed(1)}</h3>
-                <p>{movie.overview}</p>
-                <div>
-                    <p>
-                        <span>releaseDate: {movie.release_date} | </span>
-                        <span>runtime: {movie.runtime} minutes</span>
-                        <span>{movie.adult == true ? " | for adult️" : ""}</span>
-                    </p>
-                </div>
-            </div>
-        </div>
-        <div className={movieCreditsStyle.container}>
+    return <div className={movieCreditsStyle.container}>
             {credits.map(credit => {
                 return <div key={credit.id}>
                     <img src={credit.profile_path} alt={credit.name}/>
@@ -47,12 +29,10 @@ export default async function MovieCredits({id}: { id: string }) {
                         </div>
                         <div>
                             <p>popularity</p>
-                            <h6>{credit.popularity.toFixed(2)}</h6>
+                            <h6>⭐️ {credit.popularity.toFixed(2)}</h6>
                         </div>
                     </div>
                 </div>
-
             })}
         </div>
-    </div>
 }
