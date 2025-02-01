@@ -15,7 +15,7 @@ export default async function BooksPage() {
     const books = await getBooks();
     let books_results = books.results;
     return (
-        <div>
+        <div className={bookStyle.upperContainer}>
             <h1 className={bookStyle.containerTitle}>📚 New York times Best Seller List</h1>
             <div className={bookStyle.container}>
                 {books_results.map((book) => (

@@ -5,7 +5,6 @@ import {generateMetadata, IParams} from "../../../../components/metadata-title";
 
 export {generateMetadata};
 
-
 export default async function MovieDetail(props: { params: IParams }) {
     const params = await props.params;
     const id = params.id;

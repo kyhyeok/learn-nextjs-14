@@ -12,7 +12,7 @@ interface BookProps {
 }
 
 export default function Book({ book }: BookProps) {
-    return <Link href={`/books/${book.list_name}`} >
+    return <Link prefetch href={`/books/${book.list_name}`} >
         <div key={book.list_name} className={bookStyle.bookList}>
             <h2 className={bookStyle.bookTitle}>{book.display_name}</h2>
             <div className={bookStyle.bookCard}>
