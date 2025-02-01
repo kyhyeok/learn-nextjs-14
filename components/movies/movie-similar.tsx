@@ -15,8 +15,11 @@ export default async function MovieSimilar({id}: { id: string }) {
                     <Link href={`/movies/${similar.id}`}><img src={similar.poster_path} alt={similar.title}/></Link>
                     <div className={movieCreditsStyle.profileBox}>
                         <div>
-                            <p>title</p>
-                            <h4>{similar.title}</h4>
+                            <h4>
+                                {similar.title.length > 30
+                                    ? `${similar.title.slice(0, 30)}...`
+                                    : similar.title}
+                            </h4>
                         </div>
                         <div>
                             <p>releaseDate</p>
@@ -28,8 +31,8 @@ export default async function MovieSimilar({id}: { id: string }) {
                         </div>
                         <div>
                             <p>
-                                {similar.overview.length > 50
-                                    ? `${similar.overview.slice(0, 50)}...`
+                                {similar.overview.length > 70
+                                    ? `${similar.overview.slice(0, 70)}...`
                                     : similar.overview}
                             </p>
                         </div>
