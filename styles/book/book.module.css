@@ -6,18 +6,56 @@
     max-width: 90%;
     margin: 0 auto;
 }
+.containerTitle{
+    color: #999;
+    margin-bottom: 60px;
+    font-size: 2.5rem;
+    text-align: center;
+}
 
 .container a {
     text-decoration: none;
 }
 
-.bookBox {
-    margin-bottom: 20px;
-    border: 2px solid red;
-    padding: 10px 20px;
-    border-radius: 10px;
+.bookList {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    background-color: #ffffff;
+    border-radius: 12px;
+    padding: 20px;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.bookInfo > p {
-    margin-top: 10px
+.bookList:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
 }
+
+.bookTitle {
+    color: #333;
+}
+
+.bookCard h2 {
+    font-size: 1.5rem;
+    color: #444;
+    margin-bottom: 10px;
+}
+
+.bookCard p {
+    font-size: 0.9rem;
+    color: #777;
+    margin-bottom: 15px;
+}
+
+.badge {
+    display: inline-block;
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    color: #fff;
+    background-color: #4CAF50;
+}
+
