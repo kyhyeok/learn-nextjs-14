@@ -1,5 +1,5 @@
-import MovieVideos from "../../../../components/movie-videos";
-import MovieInfo from "../../../../components/movie-info";
+import MovieVideos from "../../../../components/movies/movie-videos";
+import MovieInfo from "../../../../components/movies/movie-info";
 import {Suspense} from "react";
 import {generateMetadata, IParams} from "../../../../components/metadata-title";
 

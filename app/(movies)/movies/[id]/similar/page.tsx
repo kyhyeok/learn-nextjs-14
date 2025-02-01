@@ -1,6 +1,6 @@
-import MovieInfo from "../../../../../components/movie-info";
+import MovieInfo from "../../../../../components/movies/movie-info";
 import {Suspense} from "react";
-import MovieSimilar from "../../../../../components/movie-similar";
+import MovieSimilar from "../../../../../components/movies/movie-similar";
 import {generateMetadata, IParams} from "../../../../../components/metadata-title";
 
 export {generateMetadata};

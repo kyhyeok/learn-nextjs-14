@@ -9,10 +9,10 @@ export default function Navigation() {
         <nav className={styles.nav}>
             <ul>
                 <li>
-                    <Link href="/">Home</Link> {path === "/" ? "🔥" : ""}
+                    <Link href="/">Movie</Link> {path === "/" || path.includes("movie") ? "🔥" : ""}
                 </li>
                 <li>
-                    <Link href="/about-us">AboutUs</Link> {path === "/about-us" ? "🔥" : ""}
+                    <Link href="/books">Book</Link> {path.includes("book") ? "🔥" : ""}
                 </li>
             </ul>
         </nav>

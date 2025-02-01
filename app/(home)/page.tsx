@@ -1,13 +1,13 @@
-import Movie from "../../components/movie";
+import Movie from "../../components/movies/movie";
 import homeStyles from "../../styles/home.module.css"
-import {API_URL} from "../movie-api";
+import {MOVIE_API_URL} from "../constants";
 
 export const metadata =  {
     title: "Home",
 }
 
 async function getMovies() {
-    const response = await fetch(`${API_URL}`);
+    const response = await fetch(`${MOVIE_API_URL}`);
     return await response.json();
 }
 

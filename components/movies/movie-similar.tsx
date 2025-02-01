@@ -1,9 +1,9 @@
-import movieCreditsStyle from "../styles/movie-other-info.module.css"
+import movieCreditsStyle from "../../styles/movie/movie-other-info.module.css"
 import Link from "next/link";
-import {API_URL} from "../app/movie-api";
+import {MOVIE_API_URL} from "../../app/constants";
 
 export async function getSimilar(id: string) {
-    const response = await fetch(`${API_URL}/${id}/similar`);
+    const response = await fetch(`${MOVIE_API_URL}/${id}/similar`);
     return response.json();
 }
 

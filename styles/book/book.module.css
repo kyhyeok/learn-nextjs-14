@@ -1,0 +1,23 @@
+.container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+    width: 100%;
+    max-width: 90%;
+    margin: 0 auto;
+}
+
+.container a {
+    text-decoration: none;
+}
+
+.bookBox {
+    margin-bottom: 20px;
+    border: 2px solid red;
+    padding: 10px 20px;
+    border-radius: 10px;
+}
+
+.bookInfo > p {
+    margin-top: 10px
+}

@@ -1,8 +1,8 @@
-import movieCreditsStyle from "../styles/movie-other-info.module.css"
-import {API_URL} from "../app/movie-api";
+import movieCreditsStyle from "../../styles/movie/movie-other-info.module.css"
+import {MOVIE_API_URL} from "../../app/constants";
 
 export async function getCredits(id: string) {
-    const response = await fetch(`${API_URL}/${id}/credits`);
+    const response = await fetch(`${MOVIE_API_URL}/${id}/credits`);
     return response.json();
 }
 

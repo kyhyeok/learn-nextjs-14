@@ -4,10 +4,10 @@ import {Metadata} from "next";
 
 export const metadata: Metadata = {
   title: {
-    template: "%s | Next Movies",
+    template: "%s | Next Fun",
     default: "Loading..."
   },
-  description: 'the best Movies on the best framework ',
+  description: 'the best Fun on the best framework ',
 }
 
 export default function RootLayout({
